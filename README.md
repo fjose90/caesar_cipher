@@ -35,4 +35,4 @@ This project is a function that has as parameters the message and the number of 
 
 ## Language and Frameworks
 
-[Ruby](https://ruby-doc.org/)
+[![Ruby](https://badgen.net/badge/icon/ruby/red?icon=ruby&label)](https://https://ruby-lang.org/)
