@@ -1,0 +1,15 @@
+# Bundler
+/vendor/bundle
+/.bundle
+
+# Ruby
+*.gem
+*.rbc
+
+# RSpec
+/.rspec_status
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
