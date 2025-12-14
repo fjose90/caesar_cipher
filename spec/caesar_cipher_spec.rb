@@ -1,4 +1,4 @@
-require_relative '../caesar_cipher'
+require_relative '../lib/caesar_cipher'
 
 RSpec.describe '#caesar_cipher' do
   describe 'when given a message and a shift amount' do
