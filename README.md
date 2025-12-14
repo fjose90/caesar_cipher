@@ -1,38 +1,106 @@
 # Caesar Cipher
 
-## Table of Contents
+## 📌 Overview
 
-- [Caesar Cipher](#caesar-cipher)
-  - [Table of Contents](#table-of-contents)
-  - [Use Case](#use-case)
-  - [Project Description](#project-description)
-  - [Language and Frameworks](#language-and-frameworks)
+The Caesar Cipher is one of the earliest known encryption techniques, attributed to Julius Caesar. It works by shifting each letter in a message by a fixed number of positions in the alphabet. When the shift goes past the end of the alphabet, it wraps around to the beginning.
 
-## Use Case
+This project implements a **Ruby method** that encrypts a message using the Caesar Cipher while preserving letter case and ignoring non-alphabetic characters.
 
-Julius Caesar protected his confidential information by encrypting it using a cipher. Caesar's cipher shifts each letter by a number of letters. If the shift takes you past the end of the alphabet, just rotate back to the front of the alphabet. In the case of a rotation by 3, w, x, y and z would map to z, a, b and c.
+---
 
-```sh
-Original alphabet:      abcdefghijklmnopqrstuvwxyz
-Alphabet rotated +3:  defghijklmnopqrstuvwxyzabc
+## 🧠 How It Works
+
+For a given shift of `3`:
+
+```text
+Original alphabet:  abcdefghijklmnopqrstuvwxyz
+Shifted alphabet:  defghijklmnopqrstuvwxyzabc
 ```
 
 Example:
 
-mensage = It's not enough to be good, you have to do good, whatever the cost.
-
+```ruby
+message = "It's not enough to be good, you have to do good, whatever the cost."
 shift = 3
+```
 
-The alphabet is rotated by 3 , matching the mapping above. The encrypted string is:
+Encrypted output:
 
+```text
 Lw'v qrw hqrxjk wr eh jrrg, brx kdyh wr gr jrrg, zkdwhyhu wkh frvw.
+```
 
-Note: The cipher only encrypts letters; symbols, such as -, remain unencrypted.
+📌 **Note:**
 
-## Project Description
+* Only letters are encrypted
+* Numbers, spaces, and symbols remain unchanged
+* Uppercase and lowercase letters are preserved
 
-This project is a function that has as parameters the message and the number of displacements (shift) and returns the encrypted message.
+---
 
-## Language and Frameworks
+## ✨ Features
 
-[![Ruby](https://badgen.net/badge/icon/ruby/red?icon=ruby&label)](https://https://ruby-lang.org/)
+* Supports positive and negative shifts
+* Normalizes large shift values (e.g. `87`, `-52`)
+* Preserves original letter casing
+* Ignores non-alphabetic characters
+
+---
+
+## 🛠️ Implementation
+
+The main method takes two parameters:
+
+```ruby
+def caesar_cipher(message, shift)
+```
+
+* `message` → the input string to encrypt
+* `shift` → number of positions to shift each letter
+
+It returns the encrypted string.
+
+---
+
+## 🧪 Testing
+
+The project includes **RSpec tests** covering:
+
+* Uppercase and lowercase letters
+* Positive, negative, and zero shifts
+* Large shift normalization
+* Mixed input with numbers, spaces, and symbols
+
+To run the tests:
+
+```sh
+rspec
+```
+
+---
+
+## ⏱️ Algorithm Complexity
+
+* **Time Complexity:** O(n), where n is the number of characters in the message
+* **Space Complexity:** O(n), due to the creation of a new encrypted string
+
+## 🧹 Code Style
+
+This project follows standard Ruby style guidelines:
+
+* 2-space indentation
+* Clear and descriptive variable names
+* Small, readable methods
+* Emphasis on clarity over cleverness
+
+---
+
+## 💎 Language
+
+* **Ruby**
+
+---
+
+## 🎓 Origin
+
+This project is part of [The Odin Project](https://www.theodinproject.com/) Ruby curriculum and was developed as a learning exercise focused on algorithms, edge cases, and clean code practices.
